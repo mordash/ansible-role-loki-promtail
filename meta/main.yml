@@ -1,0 +1,9 @@
+---
+galaxy_info:
+  author:
+    - Jean-Yves Fournier
+    - Tom Chivert
+  description: Ansible Role for installing a loki-promtail stack.
+  license: license (GPLv2, CC-BY, etc)
+  min_ansible_version: 2.0
+dependencies: []
