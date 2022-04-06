@@ -1,1 +1,13 @@
 ---
+- name: 'prometheus | server | restart container'
+  docker_container:
+    name: prometheus
+    restart: yes
+  tags: ['prometheus']
+
+- name: 'prometheus | node exporter | restart service'
+  systemd:
+    name: prometheus-node-exporter.service
+    state: restarted
+    enabled: yes
+  tags: ['prometheus']

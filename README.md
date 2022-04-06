@@ -7,6 +7,12 @@ An [Ansible](https://www.ansible.com) role to install/configure a [loki](https:/
 ```yaml
 ```
 
+## Prerequisites
+
+```
+create user promtail on source server
+```
+
 ## Dependencies
 
 None

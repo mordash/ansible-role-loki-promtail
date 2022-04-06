@@ -1,0 +1,2 @@
+---
+promtail_destination_server: my_server_svc01
