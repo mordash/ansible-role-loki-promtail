@@ -1,1 +1,8 @@
 ---
+- include_tasks: loki.yml
+  when: loki_install is defined
+  tags: loki
+
+- include_tasks: promtail.yml
+  when: promtail_install is defined
+  tags: promtail
