@@ -1,13 +1,13 @@
 ---
-- name: 'prometheus | server | restart container'
+- name: 'Loki | server | restart container'
   docker_container:
-    name: prometheus
+    name: loki
     restart: yes
-  tags: ['prometheus']
+  tags: ['loki']
 
-- name: 'prometheus | node exporter | restart service'
+- name: 'promtail | restart service'
   systemd:
-    name: prometheus-node-exporter.service
+    name: promtail.service
     state: restarted
     enabled: yes
-  tags: ['prometheus']
+  tags: ['promtail']
