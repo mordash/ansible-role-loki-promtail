@@ -15,4 +15,4 @@
     image: grafana/loki
     restart_policy: unless-stopped
     volumes:
-      - "{{ loki_conf_path }}/local-config.yaml:{{ loki_conf_path }}/local-config.yaml"
+      - "{{ loki_conf_path }}/local-config.yaml:/etc/loki/local-config.yaml"
