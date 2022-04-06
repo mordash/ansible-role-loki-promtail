@@ -1,13 +1,13 @@
 ---
 - name: Ensure loki conf folder
   file:
-    path: /etc/loki
+    path: {{ loki_conf_path }}
     state: directory
 
 - name: Push loki conf template
   template:
     src: '{{ loki_conf_template }}'
-    dest: "/etc/loki/local-config.yaml"
+    dest: "{{ loki_conf_path }}/local-config.yaml"
 
 - name: Start loki containter
   docker_container:
@@ -15,4 +15,4 @@
     image: grafana/loki
     restart_policy: unless-stopped
     volumes:
-      - "/etc/loki/local-config.yaml:/etc/loki/local-config.yaml"
+      - "{{ loki_conf_path }}/local-config.yaml:{{ loki_conf_path }}/local-config.yaml"
