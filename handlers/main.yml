@@ -5,7 +5,7 @@
     restart: yes
   tags: ['loki']
 
-- name: 'promtail | restart service'
+- name: 'promtail | restart service'
   systemd:
     name: promtail.service
     state: restarted
