@@ -3,6 +3,10 @@
   when: loki_install is defined
   tags: loki
 
-- include_tasks: promtail.yml
-  when: promtail_install is defined
+- name: 'promtail | include asserts'
+  include_tasks: 'asserts.yml'
+  tags: promtail
+
+- name: 'promtail | requirements'
+  include_tasks: 'requirements.yml'
   tags: promtail

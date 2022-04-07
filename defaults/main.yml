@@ -1,7 +1,9 @@
 ---
+# promtail
 promtail_destination_server_port: 3100
 promtail_haproxy_log_path: /var/log/haproxy/haproxy.log
 promtail_apache2_log_path: /var/log/apache2/*/*.log
 
+# loki
 loki_conf_template: ../templates/local-config.yaml.j2
 loki_conf_path: /etc/loki

@@ -5,10 +5,7 @@ After=network-online.target
 
 [Service]
 Type=simple
-User=promtail
-Group=promtail
 ExecStart=/opt/promtail/promtail-linux-amd64 -config.file /opt/promtail/promtail-local-config.yaml
-
 SyslogIdentifier=promtail
 Restart=always
 
