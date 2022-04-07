@@ -17,16 +17,10 @@
     src: /tmp/promtail-linux-amd64.zip
     dest: /tmp
 
-- name: 'promtail | move to /opt/promtail'
-  copy:
-    src: /tmp/promtail-linux-amd64
-    dest: /opt/promtail/promtail-linux-amd64
-    remote_src: yes
-    owner: root
-    group: root
-    mode: 0755
-  notify:
-    - 'promtail | restart service'
+- name: 'promtail | Ensure basedir exists'
+  file:
+    state: directory
+    path: /opt/promtail
 
 - name: 'promtail | push configuration file'
   template:
@@ -49,3 +43,14 @@
     daemon_reload: yes
     enabled: yes
     name: promtail.service
+
+- name: 'promtail | move to /opt/promtail'
+  copy:
+    src: /tmp/promtail-linux-amd64
+    dest: /opt/promtail/promtail-linux-amd64
+    remote_src: yes
+    owner: root
+    group: root
+    mode: 0755
+  notify:
+    - 'promtail | restart service'
