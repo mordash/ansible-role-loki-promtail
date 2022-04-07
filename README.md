@@ -23,13 +23,25 @@ loki_conf_path: /etc/loki
 
 ## Prerequisites
 
-```
-create user promtail on source server
-```
+None
 
 ## Dependencies
 
 None
+
+## Example galaxy requirement
+
+```yaml
+---
+#
+# ansible-galaxy -r install requirements.yml
+# or
+# ansible-galaxy install -r requirements.yml
+#
+- src: https://github.com/mordash/ansible-role-loki-promtail.git
+  version: main
+  name: loki-promtail
+```
 
 ## Example Playbook
 
