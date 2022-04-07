@@ -52,6 +52,9 @@ None
 
   roles:
     - { role: loki-promtail,    tags: ['loki-promtail'] }
-  when:
-    - promtail_install == "true"
+
+  vars:
+    promtail_install: true
+    promtail_haproxy_log: true
+    promtail_apache2_log: true
 ```
