@@ -24,7 +24,7 @@
 
 - name: 'promtail | push configuration file'
   template:
-    src: conf/promtail-local-config.yaml
+    src: conf/promtail-local-config.yaml.j2
     dest: /opt/promtail/promtail-local-config.yaml
     owner: root
     group: root
