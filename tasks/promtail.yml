@@ -20,7 +20,7 @@
 - name: 'promtail | Ensure basedir exists'
   file:
     state: directory
-    path: {{ promtail_folder_path }}
+    path: "{{ promtail_folder_path }}"
 
 - name: 'promtail | push configuration file'
   template:
