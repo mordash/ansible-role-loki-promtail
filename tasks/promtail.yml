@@ -25,7 +25,7 @@
 - name: 'promtail | push configuration file'
   template:
     src: conf/promtail-local-config.yaml.j2
-    dest: {{ promtail_folder_path }}/promtail-local-config.yaml
+    dest: "{{ promtail_folder_path }}/promtail-local-config.yaml"
     owner: root
     group: root
     mode: 0600
@@ -47,7 +47,7 @@
 - name: 'promtail | move to /opt/promtail'
   copy:
     src: /tmp/promtail-linux-amd64
-    dest: {{ promtail_folder_path }}/promtail-linux-amd64
+    dest: "{{ promtail_folder_path }}/promtail-linux-amd64"
     remote_src: yes
     owner: root
     group: root

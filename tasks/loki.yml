@@ -1,12 +1,12 @@
 ---
 - name: Ensure loki conf folder
   file:
-    path: {{ loki_conf_path }}
+    path: "{{ loki_conf_path }}"
     state: directory
 
 - name: Push loki conf template
   template:
-    src: '{{ loki_conf_template }}'
+    src: "{{ loki_conf_template }}"
     dest: "{{ loki_conf_path }}/local-config.yaml"
 
 - name: Start loki containter
