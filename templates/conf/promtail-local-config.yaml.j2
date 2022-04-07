@@ -7,7 +7,7 @@ positions:
   filename: /tmp/positions.yaml
 
 clients:
-  - url: http://{{ promtail_destination_server }}:{{ promtail_destination_server_port }}/loki/api/v1/push
+  - url: http://{{ loki_destination_server }}:{{ loki_exposed_port }}/loki/api/v1/push
 
 scrape_configs:
 {% if promtail_haproxy_log is defined %}

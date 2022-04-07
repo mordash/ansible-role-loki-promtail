@@ -55,8 +55,10 @@ None
 
   vars:
     promtail_install: true
-    promtail_destination_server: destination_server_name
     promtail_haproxy_log: true
     promtail_apache2_log: true
     loki_install: true
+    loki_destination_server: destination_server_name
+    loki_exposed_port: 3100
+    loki_container_port: 3100
 ```
