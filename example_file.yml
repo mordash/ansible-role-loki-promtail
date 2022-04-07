@@ -1,5 +1,0 @@
----
-promtail_install: true
-promtail_destination_server: destination_server_name
-promtail_haproxy_job: true
-promtail_apache2_job: true
