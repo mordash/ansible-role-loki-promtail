@@ -52,4 +52,6 @@ None
 
   roles:
     - { role: loki-promtail,    tags: ['loki-promtail'] }
+  when:
+    - promtail_install == "true"
 ```

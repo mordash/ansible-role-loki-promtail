@@ -10,3 +10,8 @@
 - name: 'promtail | requirements'
   include_tasks: 'requirements.yml'
   tags: promtail
+
+- name: 'promtail | install'
+  include_tasks: 'promtail.yml'
+  when: promtail_install is defined
+  tags: promtail
