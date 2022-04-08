@@ -11,3 +11,4 @@ loki_conf_path: /etc/loki
 loki_destination_server: destination_server_name
 loki_exposed_port: 3100
 loki_container_port: 3100
+loki_container_tag: 2.5.0
