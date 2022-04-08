@@ -11,10 +11,12 @@
 # promtail
 - name: 'promtail | include asserts'
   include_tasks: 'asserts.yml'
+  when: promtail_install is defined
   tags: promtail
 
 - name: 'promtail | requirements'
   include_tasks: 'requirements.yml'
+  when: promtail_install is defined
   tags: promtail
 
 - name: 'promtail | install'
