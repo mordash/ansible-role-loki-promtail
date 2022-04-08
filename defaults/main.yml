@@ -1,5 +1,6 @@
 ---
 # promtail
+promtail_version: 2.4.2
 promtail_haproxy_log_path: /var/log/haproxy/haproxy.log
 promtail_apache2_log_path: /var/log/apache2/*/*.log
 promtail_folder_path: /opt/promtail

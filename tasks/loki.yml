@@ -12,7 +12,7 @@
 - name: Start loki containter
   docker_container:
     name: loki
-    image: grafana/loki
+    image: "grafana/loki:{{ loki_container_tag }}"
     restart_policy: unless-stopped
     volumes:
       - "{{ loki_conf_path }}/local-config.yaml:/etc/loki/local-config.yaml"
