@@ -36,4 +36,7 @@ frontend:
   max_outstanding_per_tenant: 4096 # default 2048
 
 limits_config:
-  split_queries_by_interval: 2h
+  split_queries_by_interval: 48h
+
+query_scheduler:
+  max_outstanding_requests_per_tenant: 1000
