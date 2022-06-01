@@ -18,3 +18,4 @@
       - "{{ loki_conf_path }}/local-config.yaml:/etc/loki/local-config.yaml"
     ports:
      - "{{ loki_exposed_port }}:{{ loki_container_port }}"
+    networks: '{{ loki_networks }}'
