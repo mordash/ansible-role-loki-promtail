@@ -29,6 +29,8 @@
     owner: root
     group: root
     mode: 0600
+  notify:
+    - 'promtail | restart service'
 
 - name: 'promtail | install unit file to systemd'
   template:
